@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Septiembre 2022",
+    title: "Especialista en desarrollo de software − GrupoCMA",
+    description:
+      "Responsable del mantenimiento, mejora y desarrollo constante de los proyectos deback-end y front-end.",
+    link: "./CV Luis Daniel Prendas Chavarria.pdf",
+  },
+  {
+    date: "Febrero 2022",
+    title: "Full-Stack Developer − Transfesa",
+    description:
+      "Desarrollo completo de un e-commerce y branding personalizado de cero.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
